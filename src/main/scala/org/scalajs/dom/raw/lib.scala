@@ -5919,8 +5919,9 @@ abstract class CharacterData extends Node with NonDocumentTypeChildNode {
 }
 
 /**
- * The DOMException interface represents an anormal event happening when a method or
- * a property is used.
+ * The DOMException interface represents an abnormal event (called an exception) which
+ * occurs as a result of calling a method or accessing a property of a web API. This
+ * is basically how error conditions are described in web APIs.
  *
  * MDN
  */
@@ -5934,6 +5935,13 @@ class DOMException extends js.Object {
    * MDN
    */
   def code: Int = js.native
+
+  /**
+   * Returns a DOMString that contains one of the strings associated with an error name.
+   *
+   * MDN
+   */
+  def name: String = js.native
 
   def message: String = js.native
 }
